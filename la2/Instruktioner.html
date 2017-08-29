@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://www.ida.liu.se/~TDDE23/labbar/la2/la2.shtml -->
+<html lang="sv"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script type="text/javascript" src="./Instruktioner_files/300lo.json"></script><script type="text/javascript" src="./Instruktioner_files/_ate.track.config_resp"></script><style type="text/css">
+.sample {
+  margin-left: 2em;
+  font-family: monospace;
+  font-size: 130%;
+  background-color: #efefef; 
+  white-space: pre; 
+  padding: 5px;
+}
+.sample_inline {
+  font-family: monospace;
+  font-size: 130%;
+  background-color: #efefef; 
+  white-space: pre; 
+  padding: 5px;
+}
+.exercise {
+  font-weight: bold;
+  background-color: #437bbe;
+  color: white;
+  padding: 2px;
+}
+.assignment {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  padding: 5px;
+}
+.assignment_header {
+  font-size: 150%;
+  background-color: #437bbe;
+  color: white;
+  padding: 5px;
+}
+.assignment_footer {
+  font-style: italic;
+  background-color: #437bbe;
+  color: white;
+  padding: 2px;
+}
+.ptable {
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  padding: 5px;
+}
+.ptrh {
+  background-color: #3f6489;
+}
+.pth {
+  color: white;
+  text-align: center;
+  font-size: 200%;
+  padding: 10px;
+}
+.ptr1 {
+  background-color: #bfbfbf;
+}
+.ptd1 {
+  color: black;
+  text-align: center;
+  font-size: 120%;
+  padding: 2px;
+}
+.ptr2 {
+  background-color: #dfdfdf;
+}
+.ptd2 {
+  color: black;
+  font-size: 130%;
+  padding: 2px;
+  white-space: pre; 
+  font-family: monospace;
+}
+
+</style>
+
+
+
+
+
+<!-- #set var="courseHomePageHeading1" value="$courseCode $courseName ($courseMark p)" -->
+
+<!-- #set var="courseHomePageHeading2" value="För $courseProgrammes ($coursePeriod)" -->
+
+
+
+
+
+
+<!-- #set var="pageCSS"                value="/edu/ugrad/include/cindex.css" -->
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    <meta content="IE=EDGE" http-equiv="X-UA-Compatible">
+    <title>TDDE23 Funktionell och imperativ programmering, del 1</title>
+    <link rel="shortcut icon" href="http://www.ida.liu.se/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.ida.liu.se/apple-touch-icon-114x114.png">
+
+    <meta name="dcterms.title" content="TDDE23 Funktionell och imperativ programmering, del 1">
+    <meta name="dcterms.creator" content="Peter Dalenius">
+    <meta name="dcterms.format" content="text/html">
+    <meta name="dcterms.language" content="sv">
+    <meta name="dcterms.publisher" content="Linköpings universitet">
+    <meta name="dcterms.date" content="2017-08-21">
+    <meta name="dcterms.modified" content="2017-08-21">
+
+
+    <meta name="viewport" id="viewport" content="width=device-width, user-scalable=yes,initial-scale=1.0">
+
+    <link rel="stylesheet" href="./Instruktioner_files/content.css" type="text/css">
+    <link rel="stylesheet" href="./Instruktioner_files/screen.css" media="screen" type="text/css">
+    <!--[if IE 6]><link rel="stylesheet" href="http://www.ida.liu.se/mall11/css/ie6.css" media="screen" type="text/css"/><![endif]-->
+    <link rel="stylesheet" href="./Instruktioner_files/print.css" media="print" type="text/css">
+    <link rel="stylesheet" href="./Instruktioner_files/mobile.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./Instruktioner_files/ida.css">
+
+    <link rel="alternate" href="http://www.liu.se/liu-nytt/arkiv/nyhetsarkiv?l=sv&amp;format=rss" type="application/rss+xml" title="LiU-nytt">
+    <link rel="alternate" href="http://www.liu.se/liu-nytt/arkiv/nyhetsarkiv?l=en&amp;format=rss" type="application/rss+xml" title="LiU-news">
+    <link rel="alternate" href="http://www.liu.se/liu-nytt/pressmed/arkiv?format=rss" type="application/rss+xml" title="Pressmeddelanden">
+    <link rel="alternate" href="http://www.liu.se/rss/liu-jobs-sv.rss" type="application/rss+xml" title="Lediga jobb">
+    <link rel="alternate" href="http://www.liu.se/rss/liu-jobs-en.rss" type="application/rss+xml" title="Vacancies">
+
+    <script type="text/javascript" async="" src="./Instruktioner_files/ga.js.ladda ned"></script><script type="text/javascript" async="" src="./Instruktioner_files/analytics.js.ladda ned"></script><script async="" src="./Instruktioner_files/gtm.js.ladda ned"></script><script type="text/javascript" src="./Instruktioner_files/jquery.min.js.ladda ned"></script>
+    <script type="text/javascript" src="./Instruktioner_files/jquery.cookie.min.js.ladda ned"></script>
+    <script type="text/javascript" src="./Instruktioner_files/mobile.js.ladda ned"></script>
+
+  <style type="text/css">.at-icon{fill:#fff;border:0}.at-icon-wrapper{display:inline-block;overflow:hidden}a .at-icon-wrapper{cursor:pointer}.at-rounded,.at-rounded-element .at-icon-wrapper{border-radius:12%}.at-circular,.at-circular-element .at-icon-wrapper{border-radius:50%}.addthis_32x32_style .at-icon{width:2pc;height:2pc}.addthis_24x24_style .at-icon{width:24px;height:24px}.addthis_20x20_style .at-icon{width:20px;height:20px}.addthis_16x16_style .at-icon{width:1pc;height:1pc}#at16lb{display:none;position:absolute;top:0;left:0;width:100%;height:100%;z-index:1001;background-color:#000;opacity:.001}#at_complete,#at_error,#at_share,#at_success{position:static!important}.at15dn{display:none}#at15s,#at16p,#at16p form input,#at16p label,#at16p textarea,#at_share .at_item{font-family:arial,helvetica,tahoma,verdana,sans-serif!important;font-size:9pt!important;outline-style:none;outline-width:0;line-height:1em}* html #at15s.mmborder{position:absolute!important}#at15s.mmborder{position:fixed!important;width:250px!important}#at15s{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);float:none;line-height:1em;margin:0;overflow:visible;padding:5px;text-align:left;position:absolute}#at15s a,#at15s span{outline:0;direction:ltr;text-transform:none}#at15s .at-label{margin-left:5px}#at15s .at-icon-wrapper{width:1pc;height:1pc;vertical-align:middle}#at15s .at-icon{width:1pc;height:1pc}.at4-icon{display:inline-block;background-repeat:no-repeat;background-position:top left;margin:0;overflow:hidden;cursor:pointer}.addthis_16x16_style .at4-icon,.addthis_default_style .at4-icon,.at4-icon,.at-16x16{width:1pc;height:1pc;line-height:1pc;background-size:1pc!important}.addthis_32x32_style .at4-icon,.at-32x32{width:2pc;height:2pc;line-height:2pc;background-size:2pc!important}.addthis_24x24_style .at4-icon,.at-24x24{width:24px;height:24px;line-height:24px;background-size:24px!important}.addthis_20x20_style .at4-icon,.at-20x20{width:20px;height:20px;line-height:20px;background-size:20px!important}.at4-icon.circular,.circular .at4-icon,.circular.aticon{border-radius:50%}.at4-icon.rounded,.rounded .at4-icon{border-radius:4px}.at4-icon-left{float:left}#at15s .at4-icon{text-indent:20px;padding:0;overflow:visible;white-space:nowrap;background-size:1pc;width:1pc;height:1pc;background-position:top left;display:inline-block;line-height:1pc}.addthis_vertical_style .at4-icon,.at4-follow-container .at4-icon{margin-right:5px}html>body #at15s{width:250px!important}#at15s.atm{background:none!important;padding:0!important;width:10pc!important}#at15s_inner{background:#fff;border:1px solid #fff;margin:0}#at15s_head{position:relative;background:#f2f2f2;padding:4px;cursor:default;border-bottom:1px solid #e5e5e5}.at15s_head_success{background:#cafd99!important;border-bottom:1px solid #a9d582!important}.at15s_head_success a,.at15s_head_success span{color:#000!important;text-decoration:none}#at15s_brand,#at15sptx,#at16_brand{position:absolute}#at15s_brand{top:4px;right:4px}.at15s_brandx{right:20px!important}a#at15sptx{top:4px;right:4px;text-decoration:none;color:#4c4c4c;font-weight:700}#at15sptx:hover{text-decoration:underline}#at16_brand{top:5px;right:30px;cursor:default}#at_hover{padding:4px}#at_hover .at_item,#at_share .at_item{background:#fff!important;float:left!important;color:#4c4c4c!important}#at_share .at_item .at-icon-wrapper{margin-right:5px}#at_hover .at_bold{font-weight:700;color:#000!important}#at_hover .at_item{width:7pc!important;padding:2px 3px!important;margin:1px;text-decoration:none!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover{margin:0!important}#at_hover .at_item.athov,#at_hover .at_item:focus,#at_hover .at_item:hover,#at_share .at_item.athov,#at_share .at_item:hover{background:#f2f2f2!important;border:1px solid #e5e5e5;color:#000!important;text-decoration:none}.ipad #at_hover .at_item:focus{background:#fff!important;border:1px solid #fff}.at15t{display:block!important;height:1pc!important;line-height:1pc!important;padding-left:20px!important;background-position:0 0;text-align:left}.addthis_button,.at15t{cursor:pointer}.addthis_toolbox a.at300b,.addthis_toolbox a.at300m{width:auto}.addthis_toolbox a{margin-bottom:5px;line-height:initial}.addthis_toolbox.addthis_vertical_style{width:200px}.addthis_button_facebook_like .fb_iframe_widget{line-height:100%}.addthis_button_facebook_like iframe.fb_iframe_widget_lift{max-width:none}.addthis_toolbox a.addthis_button_counter,.addthis_toolbox a.addthis_button_facebook_like,.addthis_toolbox a.addthis_button_facebook_send,.addthis_toolbox a.addthis_button_facebook_share,.addthis_toolbox a.addthis_button_foursquare,.addthis_toolbox a.addthis_button_google_plusone,.addthis_toolbox a.addthis_button_linkedin_counter,.addthis_toolbox a.addthis_button_pinterest_pinit,.addthis_toolbox a.addthis_button_stumbleupon_badge,.addthis_toolbox a.addthis_button_tweet{display:inline-block}.at-share-tbx-element .google_plusone_iframe_widget>span>div{vertical-align:top!important}.addthis_toolbox span.addthis_follow_label{display:none}.addthis_toolbox.addthis_vertical_style span.addthis_follow_label{display:block;white-space:nowrap}.addthis_toolbox.addthis_vertical_style a{display:block}.addthis_toolbox.addthis_vertical_style.addthis_32x32_style a{line-height:2pc;height:2pc}.addthis_toolbox.addthis_vertical_style .at300bs{margin-right:4px;float:left}.addthis_toolbox.addthis_20x20_style span{line-height:20px}.addthis_toolbox.addthis_32x32_style span{line-height:2pc}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact,.addthis_toolbox.addthis_pill_combo_style a{float:left}.addthis_toolbox.addthis_pill_combo_style a.addthis_button_tweet{margin-top:-2px}.addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact{margin-right:4px}.addthis_default_style .addthis_separator{margin:0 5px;display:inline}div.atclear{clear:both}.addthis_default_style .addthis_separator,.addthis_default_style .at4-icon,.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300bs,.addthis_default_style .at300m{float:left}.at300b img,.at300bo img{border:0}a.at300b .at4-icon,a.at300m .at4-icon{display:block}.addthis_default_style .at300b,.addthis_default_style .at300bo,.addthis_default_style .at300m{padding:0 2px}.at300b,.at300bo,.at300bs,.at300m{cursor:pointer}.addthis_button_facebook_like.at300b:hover,.addthis_button_facebook_like.at300bs:hover,.addthis_button_facebook_send.at300b:hover,.addthis_button_facebook_send.at300bs:hover{opacity:1}.addthis_20x20_style .at15t,.addthis_20x20_style .at300bs{overflow:hidden;display:block;height:20px!important;width:20px!important;line-height:20px!important}.addthis_32x32_style .at15t,.addthis_32x32_style .at300bs{overflow:hidden;display:block;height:2pc!important;width:2pc!important;line-height:2pc!important}.at300bs{overflow:hidden;display:block;background-position:0 0;height:1pc;width:1pc;line-height:1pc!important}.addthis_default_style .at15t_compact,.addthis_default_style .at15t_expanded{margin-right:4px}#at_share .at_item{width:123px!important;padding:4px;margin-right:2px;border:1px solid #fff}#at16p{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);z-index:10000001;position:absolute;top:50%;left:50%;width:300px;padding:10px;margin:0 auto;margin-top:-185px;margin-left:-155px;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#5e5e5e}#at_share{margin:0;padding:0}#at16pt{position:relative;background:#f2f2f2;height:13px;padding:5px 10px}#at16pt a,#at16pt h4{font-weight:700}#at16pt h4{display:inline;margin:0;padding:0;font-size:9pt;color:#4c4c4c;cursor:default}#at16pt a{position:absolute;top:5px;right:10px;color:#4c4c4c;text-decoration:none;padding:2px}#at15sptx:focus,#at16pt a:focus{outline:thin dotted}#at15s #at16pf a{top:1px}#_atssh{width:1px!important;height:1px!important;border:0!important}.atm{width:10pc!important;padding:0;margin:0;line-height:9pt;letter-spacing:normal;font-family:arial,helvetica,tahoma,verdana,sans-serif;font-size:9pt;color:#444;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);padding:4px}.atm-f{text-align:right;border-top:1px solid #ddd;padding:5px 8px}.atm-i{background:#fff;border:1px solid #d5d6d6;padding:0;margin:0;box-shadow:1px 1px 5px rgba(0,0,0,.15)}.atm-s{margin:0!important;padding:0!important}.atm-s a:focus{border:transparent;outline:0;-webkit-transition:none;transition:none}#at_hover.atm-s a,.atm-s a{display:block;text-decoration:none;padding:4px 10px;color:#235dab!important;font-weight:400;font-style:normal;-webkit-transition:none;transition:none}#at_hover.atm-s .at_bold{color:#235dab!important}#at_hover.atm-s a:hover,.atm-s a:hover{background:#2095f0;text-decoration:none;color:#fff!important}#at_hover.atm-s .at_bold{font-weight:700}#at_hover.atm-s a:hover .at_bold{color:#fff!important}.atm-s a .at-label{vertical-align:middle;margin-left:5px;direction:ltr}.at_PinItButton{display:block;width:40px;height:20px;padding:0;margin:0;background-image:url(//s7.addthis.com/static/t00/pinit00.png);background-repeat:no-repeat}.at_PinItButton:hover{background-position:0 -20px}.addthis_toolbox .addthis_button_pinterest_pinit{position:relative}.at-share-tbx-element .fb_iframe_widget span{vertical-align:baseline!important}#at16pf{height:auto;text-align:right;padding:4px 8px}.at-privacy-info{position:absolute;left:7px;bottom:7px;cursor:pointer;text-decoration:none;font-family:helvetica,arial,sans-serif;font-size:10px;line-height:9pt;letter-spacing:.2px;color:#666}.at-privacy-info:hover{color:#000}.body .wsb-social-share .wsb-social-share-button-vert{padding-top:0;padding-bottom:0}.body .wsb-social-share.addthis_counter_style .addthis_button_tweet.wsb-social-share-button{padding-top:40px}.body .wsb-social-share.addthis_counter_style .addthis_button_google_plusone.wsb-social-share-button{padding-top:0}.body .wsb-social-share.addthis_counter_style .addthis_button_facebook_like.wsb-social-share-button{padding-top:21px}@media print{#at4-follow,#at4-share,#at4-thankyou,#at4-whatsnext,#at4m-mobile,#at15s,.at4,.at4-recommended{display:none!important}}@media screen and (max-width:400px){.at4win{width:100%}}@media screen and (max-height:700px) and (max-width:400px){.at4-thankyou-inner .at4-recommended-container{height:122px;overflow:hidden}.at4-thankyou-inner .at4-recommended .at4-recommended-item:first-child{border-bottom:1px solid #c5c5c5}}</style><style type="text/css">.at-branding-logo{font-family:helvetica,arial,sans-serif;text-decoration:none;font-size:10px;display:inline-block;margin:2px 0;letter-spacing:.2px}.at-branding-logo .at-branding-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////+GlNUkcc1QAAAB1JREFUeNpiYIQDBjQmAwMmkwEM0JnY1WIxFyDAABGeAFEudiZsAAAAAElFTkSuQmCC")}.at-branding-logo .at-branding-icon,.at-branding-logo .at-privacy-icon{display:inline-block;height:10px;width:10px;margin-left:4px;margin-right:3px;margin-bottom:-1px;background-repeat:no-repeat}.at-branding-logo .at-privacy-icon{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAMAAABR24SMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRF8fr9ot/xXcfn2/P5AKva////////AKTWodjhjAAAAAd0Uk5T////////ABpLA0YAAAA6SURBVHjaJMzBDQAwCAJAQaj7b9xifV0kUKJ9ciWxlzWEWI5gMF65KUTv0VKkjVeTerqE/x7+9BVgAEXbAWI8QDcfAAAAAElFTkSuQmCC")}.at-branding-logo span{text-decoration:none}.at-branding-logo .at-branding-addthis,.at-branding-logo .at-branding-powered-by{color:#666}.at-branding-logo .at-branding-addthis:hover{color:#333}.at-cv-with-image .at-branding-addthis,.at-cv-with-image .at-branding-addthis:hover{color:#fff}a.at-branding-logo:visited{color:initial}.at-branding-info{display:inline-block;padding:0 5px;color:#666;border:1px solid #666;border-radius:50%;font-size:10px;line-height:9pt;opacity:.7;transition:all .3s ease;text-decoration:none}.at-branding-info span{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.at-branding-info:before{content:'i';font-family:Times New Roman}.at-branding-info:hover{color:#0780df;border-color:#0780df}</style><style type="text/css"></style></head>
+  <body class="full">
+
+  <!-- Google Tag Manager -->
+  <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-M3QRGB" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M3QRGB');</script>
+  <!-- End Google Tag Manager -->
+
+    <div id="head" style="visibility: visible;">
+      
+      <div id="head-top">&nbsp;</div>
+      <div id="head-content"><div class="head-width-limit">
+        <div id="head-lang">
+	  <a title="English web site" href="http://www.ida.liu.se/index.en.shtml"><img src="./Instruktioner_files/flag-en.png" alt="" width="17" height="10">English web site</a>
+	</div>
+        <div id="head-search">
+          <form action="http://www.ida.liu.se/bin/search_redirect.pl" method="post">
+	    <p>
+	      <input id="search-string" accesskey="4" name="q" size="12" title="Ange sökord" placeholder="Sök">
+	      <select id="search-source" name="site" title="Välj sökområde">
+		
+		<option value="ida">Sök på IDA.LiU.se</option>
+		<option value="idaempl">Sök IDA-anställda</option>
+		<option value="idamap">Sök IDA-lokaler</option>
+		<option value="liu">Sök på LiU.se</option>
+		<option value="liuempl">Sök LiU-anställda</option>
+	      </select>
+              <input type="hidden" name="hl" value="sv">
+	      <input id="search-submit" type="submit" value="Sök" title="Sök">
+	    </p>
+	  </form>
+          <div id="search-other">
+<!--
+	    <a href="http://www.liu.se/search?l=sv">Andra sökmöjligheter</a> |
+	    <a href="http://www.liu.se/search/sitemap?l=sv" accesskey="3">Översikt</a> |
+-->
+            <a href="http://www.ida.liu.se/A-Z/index.sv.shtml">A till Ö</a>
+          </div>
+        </div>
+        <div id="logo">
+          <a href="http://www.liu.se/?l=sv" accesskey="1">
+          
+          <img class="screen" src="./Instruktioner_files/logo-sv.png" alt="Logotyp">
+          
+          <img class="handheld" alt="Sigill" src="./Instruktioner_files/sigill.png" width="0" height="0">
+          </a>
+          <img class="print" alt="Logotyp" src="./Instruktioner_files/logo-print.png" width="0" height="0">
+        </div>
+        <div id="head-text"><h1>IDA - Institutionen för datavetenskap</h1></div>
+      </div></div>
+      <div id="head-bottom">
+        <div id="navbar">
+	  <a href="http://www.liu.se/">LiU</a> &#9654; <a href="http://www.ida.liu.se/index.sv.shtml">IDA</a> &#9654; <a href="http://www.ida.liu.se/edu/ugrad/index.sv.shtml">Grundutbildning</a> &#9654; <a href="http://www.ida.liu.se/edu/ugrad/courses/index.sv.shtml">Kurser</a><a href="http://www.ida.liu.se/">   </a> &#9654; 
+<a href="http://www.ida.liu.se/~TDDE23/"> TDDE23 </a> &#9654; 
+<a href="http://www.ida.liu.se/~TDDE23/labbar/"> Labbar </a> &#9654; 
+<a href="http://www.ida.liu.se/~TDDE23/labbar/la2/"> La2 </a> &#9654; 
+ La2  
+
+	</div>
+	<div id="page-lang">
+           
+	</div>
+	<div id="head-bottom-end"></div>
+      </div>
+    </div>
+    <div id="middle" style="visibility: visible;">
+
+      <div class="handheld" id="hidemenu" onmouseover="">Göm menyn</div>
+      <div id="menu">
+        <div class="handheld" id="showmenu" onmouseover="">Visa menyn</div>
+        <ul>
+  
+  <li class="menu_heading_first"><a href="http://www.ida.liu.se/~TDDE23/index.sv.shtml">TDDE23 (2017/18)</a></li>
+  <li><a href="http://www.ida.liu.se/~TDDE23/info/kursinfo.shtml">Kursinformation</a></li>
+  <li><a href="http://www.ida.liu.se/~TDDE23/info/syliabus.sv.shtml">Kursplan</a></li>
+  <li><a href="http://www.ida.liu.se/~TDDE23/info/exam/index.sv.shtml">Examination</a></li>
+  <li><a href="http://www.ida.liu.se/~TDDE23/timetable/2016-ht1/index.shtml">Schema</a></li>
+  <li><a href="http://www.ida.liu.se/~TDDE23/contact/index.sv.shtml">Personal</a></li>
+<li class="empty">&nbsp;</li>
+<li class="menu_heading">Datorsystem</li>
+  <li><a href="http://www.ida.liu.se/~TDDE23/intro/unix-fo.shtml">Linux-föreläsningar</a></li>
+  <li><a href="http://www.ida.liu.se/~TDDE23/intro/unixuppgifter.shtml">Linux-uppgifter</a></li>
+<li class="empty">&nbsp;</li>
+<li class="menu_heading">Programmering</li>
+  <li><a href="http://www.ida.liu.se/~TDDE23/planering.shtml">Planering</a></li>
+  <li><a href="http://www.ida.liu.se/~TDDE23/studiematerial/index.shtml">Studiematerial</a></li>
+  <li><a href="http://www.ida.liu.se/~TDDE23/seminarier/index.shtml">Seminarier</a></li>
+  <li><a href="http://www.ida.liu.se/~TDDE23/quiz/index.shtml">Quiz</a></li>
+  <li><a href="http://www.ida.liu.se/~TDDE23/labbar/index.shtml">Laborationer</a></li>
+<li class="empty">&nbsp;</li>
+<li class="menu_heading">Andra kurser</li>
+  <li><a href="http://www.ida.liu.se/~TDDE25/index.en.shtml">TDDE25 Perspektiv</a></li>
+  <li><a href="http://www.ida.liu.se/~TDDE24/">TDDE24 Del 2</a></li>
+<li class="empty">&nbsp;</li>
+<li class="menu_heading">Internt</li>
+  <li><a href="https://www.ida.liu.se/~petda/asshandl/">Assistenthandledning</a></li>
+  <li><a href="http://www.ida.liu.se/~TDDC66/arkiv/index.shtml">Arkiv</a></li>
+
+  
+  
+  
+  
+        </ul>
+      </div>
+      <div id="content">
+
+	<div class="text">
+
+<!-- CONTENT -->
+<h1 align="center">2. Villkor och upprepning </h1>
+
+<h2>2.1 Inledning</h2>
+
+<h3>Studiematerial</h3>
+Innan denna labb påbörjas bör följande studiematerial ha lästs:
+<ul>
+    <li><a href="http://www.ida.liu.se/~TDDE23/studiematerial/satser-uttryck.shtml">Satser och uttryck</a></li>
+    <li><a href="http://www.ida.liu.se/~TDDE23/studiematerial/upprepning.shtml">Upprepning</a></li>
+    <li><a href="http://www.ida.liu.se/~TDDE23/studiematerial/hur-man-programmerar.shtml">Hur man programmerar</a></li>
+    <li><a href="http://www.ida.liu.se/~TDDE23/studiematerial/selektion.shtml">Selektion</a></li>
+</ul>
+
+<p>OBS! Innan du börjar med labbövningarna, backa ett steg och titta igenom
+<a href="http://www.ida.liu.se/~TDDE23/labbar/la2/regler.shtml">Regler för redovisning och komplettering</a>. 
+Kom tillbaka hit när du har gjort det.</p>
+
+<p>Syftet med denna laborationsomgång är att gräva oss djupare in i programmering i allmänhet och i programspråket Python i synnerhet.
+
+</p><p><b>OBS!</b> Om du vill öva mer på detta, finns <a href="http://www.ida.liu.se/~TDDE23/labbar/la2/extra/la1-extra.shtml">extraövningar till labb 1</a> att tillgå.</p>
+
+<h2>2.2 Fler matematiska operationer</h2>
+
+<p>Förutom de vanliga fyra räknesätten finns det i Python några ytterligare
+matematiska operatorer. Operatorn <i>//</i> utför heltalsdivision, d.v.s.
+den gör en division och kastar bort decimaldelen. Besläktad med denna är
+operatorn <i>%</i> som kallas <i>modulo</i>. Den beräknar resten vid
+heltalsdivision.</p>
+
+<p class="sample">
+&gt;&gt;&gt; <b>10 // 3</b>
+3
+&gt;&gt;&gt; <b>10 % 3</b>
+1</p>
+
+<p><span class="exercise">Övning 201</span> 
+Definiera två funktioner <i>unit</i> (ental) och <i>ten</i> (tiotal) som givet ett heltal
+plockar fram entals- och tiotalssiffran.</p>
+
+<p class="sample">
+&gt;&gt;&gt; <b>unit(123)</b>
+3
+&gt;&gt;&gt; <b>ten(123)</b>
+2</p>
+
+<p><span class="exercise">Övning 202</span>
+Definiera en funktion <i>swap_unit_ten</i> som med hjälp av funktionerna från föregående
+övning byter plats på entalet och tiotalet i ett heltal.</p>
+
+<p class="sample">
+&gt;&gt;&gt; <b>swap_unit_ten(123)</b>
+132</p>
+
+
+
+<h2>2.3 Upprepning med iteration</h2>
+
+<p>I de följande övningarna och uppgifterna kommer du att skriva lite längre
+funktioner. Om du inte redan har börjat med det, kan det vara en god idé
+att nu skriva dina funktionsdefinitioner i en separat fil, hellre än att 
+definiera dem direkt vid Python-prompten. Det gör det lättare att ändra dem och
+rätta eventuella fel.</p>
+
+<p><span class="exercise">Övning 203</span>
+Definiera funktionen "upphöjt till". Kalla den <i>power</i> och låt den ta två
+heltalsargument. Denna övning ska lösas iterativt.
+</p>
+
+<p class="sample">
+&gt;&gt;&gt; <b>power(2, 3)</b>
+8
+&gt;&gt;&gt; <b>power(5, 2)</b>
+25
+</p>
+
+<p>Du kan testa att du gjort rätt genom att jämföra med den inbyggda operatorn 
+<i>**</i> som beräknar just "upphöjt till". (Givetvis får du inte använda
+dig av den i funktionen <i>power</i>.)</p>
+
+<p><span class="exercise">Övning 204</span> 
+Definiera en funktion <i>sum_first</i> som adderar ihop de första <i>n</i>
+heltalen. Summan av de <i>n</i> första heltalen kan också beräknas med
+formeln <i>n</i>(<i>n</i>+1)/2 men i den här övningen vill vi att du 
+summerar talen ett i taget med hjälp av någon form av upprepning
+(iteration). Denna övning ska lösas iterativt.</p>
+
+<p class="sample">
+&gt;&gt;&gt; <b>sum_first(6)</b>
+21
+&gt;&gt;&gt; <b>sum_first(0)</b>
+0
+</p>
+
+<p><span class="exercise">Övning 205</span>
+Skriv en funktion <i>sum_numbers</i> som summerar de element på en lista som
+är tal. Allt annat som finns på listan ska ignoreras.  Denna övning ska lösas iterativt.</p>
+
+<p>Så här kontrollerar du om något är ett tal:
+</p><p class="sample">import numbers
+def isnumber(x):
+  return isinstance(x, numbers.Number)
+</p>
+<p>Nu kan du testa om saker är tal med anrop som <span class="sample_inline">isnumber(5.324)</span>, <span class="&lt;/p">
+
+</span></p><p class="sample">
+&gt;&gt;&gt; <b>sum_numbers(["a", 1, "b", 2, [["b", 4], 2], 3])</b>
+6
+</p>
+
+<p><span class="exercise">Övning 206</span> 
+Skriv en funktion <i>find_letter</i> som returnerar ett sant värde (<i>True</i>)
+om en given bokstav (egentligen en sträng) finns i ett ord, annars ett falskt 
+värde (<i>False</i>). Ordet representeras som en lista. Denna övning ska lösas iterativt.</p>
+ 
+<p class="sample">
+&gt;&gt;&gt; <b>find_letter("u", ["h", "u", "s"])</b>
+True
+&gt;&gt;&gt; <b>find_letter("a", ["b", "i", "l"])</b>
+False
+</p>
+
+<p><span class="exercise">Övning 207</span>
+
+Skriv en funktion <i>remove_vowels</i> som tar en lista med bokstäver 
+(egentligen strängar) och returnerar en ny lista med vokalerna borttagna. 
+Det kanske går lättare om du föreställer dig att du ska skapa en ny lista 
+med endast konsonanter snarare än att ta bort vokalerna. Tips: Använd dig av
+<i>find_letter</i> som du definierat ovan!  Denna övning ska lösas iterativt.</p>
+
+<p class="sample">
+&gt;&gt;&gt; <b>remove_vowels(["b", "i", "r", "g", "i", "t", "t", "a"])</b>
+['b', 'r', 'g', 't', 't']
+</p>
+
+
+<h2>2.4 Uppgift</h2>
+
+<p>Titta gärna på 
+<a href="http://www.ida.liu.se/~TDDE23/labbar/la2/regler.shtml">Regler för redovisning och komplettering</a>
+för information om hur du ska redovisa dina resultat från uppgifterna nedan.</p>
+
+
+<div class="assignment">
+
+<p class="assignment_header">Uppgift 2 - Personnummer</p>
+
+<p>Skriv en funktion <i>check_pnr</i> som tar ett personnummer i form
+av en lista med tio siffror på formen [<i>å, å, m, m, d, d, x, x, x, k</i>] och
+kontrollerar att kontrollsiffran, den sista siffran, är korrekt. Dela
+upp uppgiften i flera mindre funktioner som du kan testköra för
+sig. Om funktionerna utför någon form av upprepning får du själv välja
+metod, iteration eller rekursion.</p>
+
+<p>Metoden för att räkna ut kontrollsiffran i personnummer är enligt
+följande. Multiplicera alla siffror utom den sista med omväxlande 2
+och 1. Summera de enskilda siffrorna i produkterna (dvs om produkten
+är 2*5 = 10 så summerar vi 1 och 0). Kontrollsiffran är skillnaden
+mellan nästa högre (eller samma) tiotal och summan av siffrorna.</p>
+
+<p class="sample">Personnummer: 7 2 0 1 2 3 1 2 3
+Viktsiffror:  2 1 2 1 2 1 2 1 2
+-------------------------------------
+Produkt:     14 2 0 1 4 3 2 2 6
+Siffersumma: 1+4+2+0+1+4+3+2+2+6 = 25
+Närmast högre tiotal: 30
+Kontrollsiffra: 30-25 = 5
+</p>
+
+<p class="sample">
+&gt;&gt;&gt; <b>check_pnr([7, 4, 0, 2, 1, 7, 4, 8, 2, 0])</b>
+True
+&gt;&gt;&gt; <b>check_pnr([7, 4, 0, 2, 1, 7, 4, 8, 2, 1])</b>
+False
+</p>
+
+<p><span class="exercise">Testning</span>
+  För att se till att din funktion klarar av uppgiften finns det ett
+  pythonprogram som kör automatisk testning på din kod. Programmet kan antingen
+  hämtas (<a href="http://www.ida.liu.se/~TDDE23/labbar/tester/test_2.py">test_2.py</a>) om du inte befinner dig
+  på datorerna i SU-salarna eller köras direkt från filsystemet
+  (<b>~TDDE23/www-pub/labbar/tester/test_2.py</b>) om du befinner
+  dig på en av datorerna i ovannämnda salar. Öppna filen och läs
+  instruktionerna för hur man för att se hur man
+  kör programmet och kör det sedan för att testa labb 1B.
+</p>
+
+<p class="assignment_footer">Redovisa programkod för samtliga
+funktioner du skrivit, samt körexempel som visar att funktionen kan
+identifiera både korrekta och felaktiga personnummer. Testa särskilt
+med personnummer med kontrollsiffran 0.</p>
+</div>
+	  <br class="cleaner">
+	  <p class="content-responsible">
+             Sidansvarig: <a title="E-posta Peter Dalenius (peter.dalenius@liu.se)" href="mailto:peter.dalenius@liu.se?subject=http://www.ida.liu.se/~TDDE23/labbar/la2/la2.shtml">Peter Dalenius</a><br>
+Senast uppdaterad: 2017-08-21
+	  </p>
+	</div>
+      </div>
+      <br class="cleaner">
+    </div>
+<!-- Page foot starts here -->
+    <div id="foot" style="visibility: visible;"><div class="foot-width-limit">
+      <div id="foot-content">
+	<div class="foot-column">
+          <div class="text">
+            <p><strong>Institutionen för datavetenskap</strong><br>
+            Linköpings universitet<br>
+            581&nbsp;83 LINKÖPING<br>
+	    Tel: 013-28&nbsp;10&nbsp;00<br>
+	    Fax: 013-14&nbsp;22&nbsp;31<br>
+	    </p>
+            <p>
+              <a href="http://www.ida.liu.se/department/contact/index.sv.shtml" title="Kontakta IDA">Kontakta IDA</a> |
+	      <a href="http://www.ida.liu.se/department/location/index.sv.shtml" title="Kartor">Kartor</a>
+            </p>
+            <p><a href="http://www.liu.se/om-webb?l=sv" accesskey="0">Om webbplatsen</a></p>
+          </div>
+        </div>
+       <div class="foot-column">
+          <div class="text">
+            <p>
+              <strong>LiU:s organisation</strong>
+            </p>
+            <ul>
+              <li><a href="http://liu.se/om-liu">Om LiU</a></li>
+            </ul>
+            <ul>
+              <li><a href="http://www.filfak.liu.se/?l=sv">Filosofiska fakulteten</a></li>
+              <li><a href="http://www.hu.liu.se/?l=sv">Hälsouniversitetet</a></li>
+              <li><a href="http://www.lith.liu.se/?l=sv">Tekniska högskolan</a></li>
+              <li><a href="http://www.liu.se/uv?l=sv">Utbildningsvetenskap</a></li>
+            </ul>
+            <ul>
+              <li><a href="http://www.liu.se/om-liu/organisation/institutioner?l=sv">Institutioner</a></li>
+              <li><a href="http://www.liu.se/om-liu/organisation/uf?l=sv">Universitetsförvaltningen</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot-column">
+          <div class="text">
+            <p>
+              <strong>LiU-ingångar</strong>
+	    </p>
+            <ul>
+              <li><a href="http://liu.se/utbildning" title="Utbildning">Utbildning</a></li>
+              <li><a href="http://liu.se/forskning" title="Forskning">Forskning</a></li>
+              <li><a href="http://liu.se/samverkan" title="Samverkan">Samverkan</a></li>
+            </ul>
+            <ul>
+              <li><a href="http://www.student.liu.se/?l=sv" title="LiU Student">LiU Student</a></li>
+              <li><a href="http://old.liu.se/insidan?l=sv" title="LiU Anställd">LiU Anställd</a></li>
+              <li><a href="http://liu.se/alumni" title="LiU Alumni">LiU Alumni</a></li>
+              <li><a href="http://www.liu.se/fundraising?l=sv" title="LiU Fundraising">LiU Fundraising</a></li>
+            </ul>
+            <ul>
+              <li><a href="http://www.bibl.liu.se/?l=sv" title="Biblioteket">Biblioteket</a></li>
+              <li><a href="http://liu.se/jobba-pa-liu" title="Lediga jobb">Lediga jobb</a></li>
+              <li><a href="http://www.liu.se/press?l=sv" title="Press">Press</a></li>
+              <li><a href="http://www.ep.liu.se/index.sv.asp" title="LiU Electronic Press">LiU Electronic Press</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="foot-column">
+          <div class="text">
+            <p><strong>IDA-ingångar</strong><br>
+              <a href="http://www.ida.liu.se/edu/ugrad/index.sv.shtml">Grundutbildning</a><br>
+              <a href="http://www.ida.liu.se/edu/ugrad/thesis/index.sv.shtml">Exjobb</a><br>
+              <a href="http://www.ida.liu.se/edu/grad/index.sv.shtml">Forskarutbildning</a><br>
+              <a href="http://www.ida.liu.se/research/index.en.shtml">Forskning</a><br>
+              <a href="http://www.ida.liu.se/department/org/index.sv.shtml">Organisation</a><br>
+              <a href="http://www.ida.liu.se/local/ida/index.sv.shtml">Internwebb</a><br>
+              <a href="http://www.ida.liu.se/department/emergency/index.sv.shtml">Akut</a><br>
+            </p>
+          </div>
+        </div>
+	<div id="foot-content-end"></div>
+      </div>
+      <div id="page-icons">
+	<script type="text/javascript" src="./Instruktioner_files/addthis_widget.js.ladda ned"></script>
+	<div class="addthis_toolbox addthis_default_style">
+	  <a class="addthis_button_facebook at300b" title="Facebook" href="http://www.ida.liu.se/~TDDE23/labbar/la2/la2.shtml#"><span class="at-icon-wrapper" style="background-color: rgb(59, 89, 152); line-height: 16px; height: 16px; width: 16px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Facebook" alt="Facebook" class="at-icon at-icon-facebook" style="width: 16px; height: 16px;"><g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g></svg></span></a>
+	  <a class="addthis_button_twitter at300b" title="Twitter" href="http://www.ida.liu.se/~TDDE23/labbar/la2/la2.shtml#"><span class="at-icon-wrapper" style="background-color: rgb(29, 161, 242); line-height: 16px; height: 16px; width: 16px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Twitter" alt="Twitter" class="at-icon at-icon-twitter" style="width: 16px; height: 16px;"><g><path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336" fill-rule="evenodd"></path></g></svg></span></a>
+	  <a class="addthis_button_email at300b" target="_blank" title="Email" href="http://www.ida.liu.se/~TDDE23/labbar/la2/la2.shtml#"><span class="at-icon-wrapper" style="background-color: rgb(132, 132, 132); line-height: 16px; height: 16px; width: 16px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="Email" alt="Email" class="at-icon at-icon-email" style="width: 16px; height: 16px;"><g><g fill-rule="evenodd"></g><path d="M27 22.757c0 1.24-.988 2.243-2.19 2.243H7.19C5.98 25 5 23.994 5 22.757V13.67c0-.556.39-.773.855-.496l8.78 5.238c.782.467 1.95.467 2.73 0l8.78-5.238c.472-.28.855-.063.855.495v9.087z"></path><path d="M27 9.243C27 8.006 26.02 7 24.81 7H7.19C5.988 7 5 8.004 5 9.243v.465c0 .554.385 1.232.857 1.514l9.61 5.733c.267.16.8.16 1.067 0l9.61-5.733c.473-.283.856-.96.856-1.514v-.465z"></path></g></svg></span></a>
+	  <span class="addthis_separator">&nbsp;</span>
+	  <a class="addthis_button_compact at300m" href="http://www.ida.liu.se/~TDDE23/labbar/la2/la2.shtml#"><span class="at-icon-wrapper" style="background-color: rgb(255, 101, 80); line-height: 16px; height: 16px; width: 16px;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" title="More" alt="More" class="at-icon at-icon-addthis" style="width: 16px; height: 16px;"><g><path d="M18 14V8h-4v6H8v4h6v6h4v-6h6v-4h-6z" fill-rule="evenodd"></path></g></svg></span>Dela</a>
+	  <span class="addthis_separator">&nbsp;</span>
+	  <a href="http://www.ida.liu.se/~TDDE23/labbar/la2/la2.shtml#">Till toppen <img src="./Instruktioner_files/till_toppen.png" alt="Till toppen"></a>
+	<div class="atclear"></div></div>
+	<script type="text/javascript">
+	  var addthis_config = {
+	    username: "liuweb",
+	    ui_language: "sv",
+	    data_use_flash: false,
+	    data_use_cookies: false
+	  };
+	  var addthis_share = {
+	    templates: {
+	      twitter: "{{title}}: {{url}} #LiU"
+	    },
+            url: "http://www.ida.liu.se/~TDDE23/labbar/la2/la2.shtml",
+            title: "(none)"
+	  };
+	</script>
+      </div>
+      <br>
+    </div><br><div id="pageTypeLinks"><h2><a href="http://www.ida.liu.se/~TDDE23/labbar/la2/la2.shtml#" id="mobile">mobil.liu.se</a> | <a href="http://www.ida.liu.se/~TDDE23/labbar/la2/la2.shtml#" id="desktop">www.liu.se</a></h2></div></div><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;"><iframe id="_atssh247" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px; left: 0px;" src="./Instruktioner_files/sh.886bb8b2fb82aeab6a228151.html"></iframe></div><style id="service-icons-0"></style>
+    <script type="text/javascript">
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-2538626-1']);
+      _gaq.push(['_setDomainName', '.liu.se']);
+      _gaq.push(['_addIgnoredRef', 'liu.se']);
+      _gaq.push(['_gat._anonymizeIp']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  
+
+
+</body></html>
