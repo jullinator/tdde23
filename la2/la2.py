@@ -1,22 +1,68 @@
-import math
-def check_pnr (pnr_list=[]):
-    """
-    Kollar om kontrollnumret i ett personnummer stämmer.
-    :param pnr_list: Personnummer
-    :type pnr_list: [Number]
-    :return:
-    """
-    sum=0
-    control_pnr= pnr_list[len(pnr_list)-1]          # Drar ut kontrollnumret ur personnumret
-    for n in range(len(pnr_list)-1):                # Alla förutom kontrollnumret
-        multiplier = 2 - n%2                        # Första multipliceras med 2, sen 1,2...
-        sum+= multiplier * pnr_list[n]
-    rounded_sum = int(math.ceil(sum/10.0)*10)       # 22->2.2->3.0->30
-    calc_pnr = (rounded_sum - sum)                  # Jämförs med kontrollnumret i listan
-    return calc_pnr == control_pnr
+#encode = "utf-8"
+import math, numbers
 
-personal_id_ok = [7, 4, 0, 2, 1, 7, 4, 8, 2, 0]
-personal_id_fail = [7, 4, 0, 2, 1, 7, 4, 8, 2, 1]
-print(check_pnr(personal_id_fail))
-print(check_pnr(personal_id_ok))
-check_pnr()
+def unit (a):
+    """12 -> 2"""
+    return a % 10
+
+def ten (a):
+    """12 -> 1"""
+    return (a-unit(a))//10
+
+def siffer_summa(x):
+    """"""
+    return ten(x)+unit(x)
+
+def get_mult(i):
+    """om jämt -> 2, udda -> 1"""
+    mult = 1
+    if i % 2 == 0:
+        mult = 2
+    return mult
+
+def get_sum(list=[]):
+    """Bara nio första (0-8), return sum"""
+    sum=0
+    for i in range(9):
+        mult = get_mult(i)
+        prod = mult * list[i]
+        sum += siffer_summa(prod)
+    return sum
+
+def up_ten (x):
+    """ 20-> 20, 24 -> 30"""
+    if x%10 == 0:
+        return x
+    return (x-unit(x)+10)
+
+
+#WORKED
+def check_pnr (pnr_list=[]):
+    """Kollar om kontrollnumret i ett personnummer stämmer."""
+    sum = get_sum(pnr_list)
+    sum_up = up_ten(sum)
+    ctrl = sum_up - sum
+    return ctrl == pnr_list[9]
+
+
+#WORKED
+def check_pnr_dirty(list):
+    p_list =[]
+    for i in range(9):
+        mult = (i%2)*-1 +2
+        p_list.append(list[i]*mult)
+    sum = 0
+    for item in p_list:
+        ten = (item - item%10)//10
+        one = item%10
+        sum += ten + one
+    sum_up = 0
+    if sum % 10 == 0:
+        sum_up = sum
+    else:
+        sum_up = (sum - sum%10) + 10
+    return (sum_up - sum) == list[9]
+
+"""TESTER"""
+
+#print(sum_ten(5), sum_ten(15))

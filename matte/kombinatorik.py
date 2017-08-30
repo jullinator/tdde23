@@ -17,34 +17,7 @@ def kombinationer (n, k):
 
 
 
-def dansa_q(w, l):
-    dic={}
-    for i in range(l):
-        str = ''
-        for c in w:
-            str+=c
-    pass
 
-
-uppgifter = {}
-uppgifter[(5,24)] = 2
-
-
-def dansa (word="", new_word_length=3):
-    """Hur många olika ord som är $new_word_length långa kan göras av $word"""
-    l = new_word_length
-    # Hitta repeat av $char in $word
-    char_count = {}
-    char_spec = {}
-    for char in word:
-        if char in char_count.keys():
-            char_count[char] += 1
-        else:
-            char_count[char] = 1
-
-    #
-
-    pass
 
 
 
