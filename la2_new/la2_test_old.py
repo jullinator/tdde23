@@ -1,29 +1,3 @@
-#!/usr/bin/env python3
-"""
-Unit testing using asserts for lab 1
-
-Note:
-If you have downloaded the scripts from the website it might not
-have the access right. To solve this run:
-$ chmod +x <path_to_test_1.py>
-
-Usage (case insensitive for parameters to --test):
-$ ./test_1.py <path_to_lab>
-to test whole lab 1
-
-Initial version by Erik Hansson <erik.b.hansson@liu.se>
-
-Updated for TDDE23 by Frans Skarman <frask812@student.liu.se>
-
-Changelog:
- * 31/8-2016: Updated the printed traceback in case that the given file
-   can not be imported.
-"""
-
-from argparse import ArgumentParser
-from importlib.machinery import SourceFileLoader
-from traceback import format_exc
-import sys
 
 
 

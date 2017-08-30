@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c413b4a3-6154-499f-b094-3e33a8974125" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/tdde23.iml" afterPath="$PROJECT_DIR$/.idea/tdde23.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matte/kombinatorik.py" afterPath="$PROJECT_DIR$/matte/kombinatorik.py" />
+=======
+      <change type="MOVED" beforePath="$PROJECT_DIR$/la2/test.py" afterPath="$PROJECT_DIR$/la2/la2_test_old.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/la2/la2.py" afterPath="$PROJECT_DIR$/la2/la2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lab1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/lab1/.idea/workspace.xml" />
+>>>>>>> 6b7c8d495ae19f230ed88fce7d10a99dbd6cdc15
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,16 +24,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="uppg1.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tata65/uppg1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="118">
               <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding />
+=======
+      <file leaf-file-name="lab2_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/la2/lab2_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+>>>>>>> 6b7c8d495ae19f230ed88fce7d10a99dbd6cdc15
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+=======
+      <file leaf-file-name="la2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/la2/la2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding>
+                <marker date="1504024180000" expanded="true" signature="35:321" ph="..." />
+                <marker date="1504024180000" expanded="true" signature="145:321" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> 6b7c8d495ae19f230ed88fce7d10a99dbd6cdc15
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -44,6 +78,7 @@
       <list>
         <option value="$PROJECT_DIR$/kombinatorik.py" />
         <option value="$PROJECT_DIR$/kombinatorik_test.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/matte/kombinatorik.py" />
         <option value="$PROJECT_DIR$/matte/mängder.py" />
         <option value="$PROJECT_DIR$/matte/mängder_test.py" />
@@ -59,6 +94,22 @@
     <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager">
+=======
+        <option value="$PROJECT_DIR$/la2/la2_test.py" />
+        <option value="$PROJECT_DIR$/la2/la2_test_old.py" />
+        <option value="$PROJECT_DIR$/la2/lab2_test.py" />
+        <option value="$PROJECT_DIR$/la2/la2.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-41" />
+    <option name="y" value="89" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+>>>>>>> 6b7c8d495ae19f230ed88fce7d10a99dbd6cdc15
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
@@ -88,7 +139,16 @@
             <path>
               <item name="tdde23" type="b2602c69:ProjectViewProjectNode" />
               <item name="tdde23" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="tata65" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="la2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tdde23" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tdde23" type="462c0819:PsiDirectoryNode" />
+              <item name="lab1" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 6b7c8d495ae19f230ed88fce7d10a99dbd6cdc15
             </path>
           </expand>
           <select />
@@ -97,6 +157,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../python-challenges" />
   </component>
@@ -104,6 +165,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\justu\Documents\PycharmProjects\tdde23\matte" />
     </key>
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> 6b7c8d495ae19f230ed88fce7d10a99dbd6cdc15
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -258,12 +322,21 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-6" y="-6" width="1381" height="885" extended-state="6" />
+=======
+    <frame x="-41" y="89" width="1400" height="1000" extended-state="0" />
+    <editor active="true" />
+>>>>>>> 6b7c8d495ae19f230ed88fce7d10a99dbd6cdc15
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13752744" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25835475" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> 6b7c8d495ae19f230ed88fce7d10a99dbd6cdc15
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -285,12 +358,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+<<<<<<< HEAD
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tata65/uppg1.py</url>
           <line>30</line>
         </line-breakpoint>
       </breakpoints>
+=======
+>>>>>>> 6b7c8d495ae19f230ed88fce7d10a99dbd6cdc15
       <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
@@ -344,9 +420,98 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/matte/kombinatorik_test.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="340">
+=======
+        <state relative-caret-position="105">
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kombinatorik.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kombinatorik_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kombinatorik.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kombinatorik_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+>>>>>>> 6b7c8d495ae19f230ed88fce7d10a99dbd6cdc15
           <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kombinatorik.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kombinatorik_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/la2/la2_test_old.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab1/lab1_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="19" />
           <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/la2/lab2_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/la2/la2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+<<<<<<< HEAD
             <element signature="e#15#30#0" expanded="false" />
           </folding>
         </state>
@@ -368,6 +533,10 @@
           <caret line="12" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="19" />
           <folding>
             <element signature="e#15#30#0" expanded="false" />
+=======
+            <marker date="1504024180000" expanded="true" signature="35:321" ph="..." />
+            <marker date="1504024180000" expanded="true" signature="145:321" ph="..." />
+>>>>>>> 6b7c8d495ae19f230ed88fce7d10a99dbd6cdc15
           </folding>
         </state>
       </provider>
