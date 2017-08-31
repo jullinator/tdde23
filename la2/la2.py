@@ -47,6 +47,7 @@ def check_pnr (pnr_list=[]):
 
 #WORKED
 def check_pnr_dirty(list):
+    """Anropar inga externa funktioner, rörigt"""
     p_list =[]
     for i in range(9):
         mult = (i%2)*-1 +2

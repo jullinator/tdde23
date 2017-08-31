@@ -37,7 +37,7 @@ def move_piece(board, x, y, new_x, new_y):
     return False
 
 def count(board, field, cord, spelare):
-    """ column=x, row= y"""
+    """ column=x, row= y ; place = chooses x or y cord depending on field argument"""
     count=0
     for key in board.keys():
         place = 0
