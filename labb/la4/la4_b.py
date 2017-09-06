@@ -5,6 +5,8 @@ LOGIC = ["true", "false"]
 
 def interpret (expression, table = {}):
     """return 'true' or 'false' """
+    if expression[0] == "LOGIC": #BASFALL
+        return expression[0]
     if not expression:
         return []
     item = expression[0]
@@ -20,4 +22,4 @@ def interpret (expression, table = {}):
 
 def test ():
     #interpret(["cat_asleep", "OR", ["NOT", "cat_gone"]],{"door_open": "false", "cat_gone": "true", "cat_asleep": "true"})
-    interpret(["true", "OR", "true"], {})
+    interpret(["true"], {})
