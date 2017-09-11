@@ -1,6 +1,5 @@
 #coding = utf-8
-
-i = 0
+import random
 
 def f (k, a, b, p):
     """
@@ -9,10 +8,6 @@ def f (k, a, b, p):
     :param b: Antal kronor Ida hade från början
     :param p: Sannolikhet att Matte vinner en slantsingling
     """
-    global i
-    i+=1
-    if i >= 1000:
-        return 0
     if k >= a + b:
         return 1
     elif k <= 0:
@@ -22,9 +17,18 @@ def f (k, a, b, p):
 
 
 def sim(k, a, b, p):
-    """ 5, 5, 5, 1/6 -> 1/6^5 + 5/6 * 1/6^6"""
-    q = 1-p
-    return p**b +q * p**(b+1) + q*p*q*(p**(b+1))
+    """uses random to simulate a game"""
+    res = 0
+    sims = 10**5
+    for i in range(sims):
+        money = k
+        while money < a+b and money > 0:
+            roll = random.randint(1, 6)
+            money = money + 1 if roll == 1 else money -1
+        res = res + 1 if money >= a+b else res
+    odds = res / sims
+    return odds
+
 
 def formel(k,a,b ,p):
     qp = ((1-p)/p)
@@ -33,5 +37,6 @@ def formel(k,a,b ,p):
 
 #print(f(5, 5, 5, 1.0/6))
 #print(i)
-print(formel(5,5,5,1.0/6))
-print(sim(5,5,5, 1.0/6))
+real, sim_res = formel(5,5,5, 1.0/6) ,sim(5,5,5, 1.0/6)
+print(real, sim_res, real/sim_res if sim_res>0 else 0)
+print()

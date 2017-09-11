@@ -10,7 +10,11 @@ E = (2,6)
 BDAYS = [A, B, C, D, E]
 YEAR = 2017
 
-
+def closest_generator (seq,date):
+    min_dif = 365
+    for i in seq:
+        min_dif = min(i, min_dif)
+        yield min_dif
 
 def closest_bday(mon, day):
     """

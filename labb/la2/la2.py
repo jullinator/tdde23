@@ -48,7 +48,7 @@ def check_pnr (pnr_list=[]):
 
 #WORKED
 def check_pnr_dirty(list):
-    """Anropar inga externa funktioner, rörigt"""
+    """Anropar inga externa funktioner"""
     mult = lambda x: 2 if x%2 == 0 else 1
     p_list = [ list[i]*mult(i) for i in range(9)]
     ten, one = lambda x: (x-x%10)//10, lambda x: x%10               # tiotal-siffran samt entalssiffran
