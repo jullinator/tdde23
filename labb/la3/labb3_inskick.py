@@ -1,3 +1,7 @@
+# Justus Karlsson - Laboration 3 - juska933
+
+#LABB A
+
 def new_board():
     return {}
 
@@ -67,3 +71,34 @@ def nearest_piece(board, x, y):
             n_piece = key
 
     return n_piece
+
+
+
+
+def factorial (n):
+    if n == 0:
+        return 1
+    return n* factorial(n-1)
+
+def perm (n,k):
+    """Recursive factorial, but stops when n is equal to k+1."""
+    if n == k:
+        return 1
+    if n <= k+1:
+        return k+1
+    return n * perm(n-1, k)
+
+
+def choose(n, k):
+    """ Combinations if you choose k from n. Doesn't calculate each factorial independently. """
+    q = n-k
+    perm_res = 0
+
+    if k >= q:
+        perm_res = perm(n, k) // factorial(q)
+
+    else:
+        perm_res = perm(n, q) // factorial(k)
+
+    return perm_res
+

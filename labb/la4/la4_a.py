@@ -12,8 +12,18 @@ uppercase = string.ascii_uppercase+"ÅÄÖ"
 case1 = lowercase+"_"+"."
 case2 = uppercase+ " " + "|"
 
+def split_rec(string):
+    """Rekursiva"""
 
-def split_rec(string, res1="", res2=""):
+    if not string:
+        return ("", "")
+    c = string[0]
+    res1, res2 = split_rec(string[1:])
+    res1 = c+res1 if c in case1 else res1
+    res2 = c+res2 if c in case2 else res2
+    return res1, res2
+
+def split_rec_2(string, res1="", res2=""):
     """Rekursiva"""
     if not string:
         return (res1,res2)
@@ -25,7 +35,12 @@ def split_rec(string, res1="", res2=""):
         return split_rec(rest, res1, res2 + letter)
     return split_rec(rest, res1, res2)
 
+
+
+
+
 def split_it(str):
+    """Iterativ"""
     str1 = str2 = ""
     for char in str:
         if char in case1:
@@ -33,6 +48,9 @@ def split_it(str):
         if char in case2:
             str2+= char
     return (str1, str2)
+
+
+
 
 def test():
     test1 = "fTlH-yE((g 48aQnUdI#5eC_K§b 29äB>cRkO7-aW-0sN#i 0>nFeOrX=!_ =!sJöUkM1aP(>_Sh wOiV,lE4aR3_ pTåH_Em jLuA§kZ`aY>_ @tDuO5vGo$r1"
@@ -47,5 +65,3 @@ def test():
     for test in tests:
         print(split_rec(test))
         print(split_it(test))
-
-test()

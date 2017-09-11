@@ -1,50 +1,27 @@
 # encode = utf-8
-from tree import left_subtree
 
-# Generators (yield, current_max)
+# Generators ? (yield, current_max)
 
 OPERATORS = ["OR", "AND"]
 LOGIC = ["true", "false"]
 
-def sub_trees(exp, table):
-    """Recursive?"""
-    keys = [item for item in exp if (item in OPERATORS and item not in table.keys())]
-    return exp[0], keys, exp[2]
-
-def interpret_old (exp, table):
-    """return 'true' or 'false' """
-
+def interpret(exp, table):
+    """
+    Interprets a logical expression. Returns a string; 'true' if the expression is correct, and 'false' if it's incorrect.
+    """
     if isinstance(exp, str):
-        if exp in LOGIC:
-            return exp
-        elif exp in table.keys():
+        if exp in table.keys():
             return table[exp]
-    i=0
-    results = []
-    key="NONE"
-    while i < len(exp):
-        if exp[i] == "NOT":
-            if "NOT" not in table.keys():
-                results.append("false" if interpret(exp[i + 1], table) == "true" else "true")
-            else:
-                pass
+        return exp
 
-            i += 2
-        elif exp[i] in OPERATORS and exp[i] not in table.keys():
-            key = exp[i]
-            i+=1
-        else:
-            results.append(interpret(exp[i], table))
-            i += 1
-    if key == "AND":
-        return "true" if results[0] == "true" and results[1] == "true" else "false"
-    elif key == "OR":
-        return "true" if results[0] == "true" or results[1] == "true" else "false"
-    elif key == "NONE":
-        #no key -> ["true"] , ["NOT", ["true"]]  (thus only one result since no OPERATOR
-        return results[0]
-        pass
+    elif len(exp) == 3:
+        if exp[1] == "AND":
+            return "true" if interpret(exp[0], table) == "true" and interpret(exp[2], table) == "true" else "false"
+        elif exp[1] == "OR":
+            return "true" if interpret(exp[0], table) == "true" or interpret(exp[2], table) == "true" else "false"
 
+    elif len(exp) == 2 :
+        return "false" if interpret(exp[1], table) == "true" else "true"
 
 def interpret (exp, table, left=""):
     """return 'true' or 'false' """
@@ -75,7 +52,7 @@ def interpret (exp, table, left=""):
             return "true" if interpret(left, table) =="true" or interpret(exp[1:], table) == "true" else "false"
 
     elif item == "NOT":
-        return interpret(exp[2:], table, "false" if interpret(exp[1:], table) =="true" else "true" )
+        return interpret(exp[2:], table, "false" if interpret(exp[1], table) =="true" else "true" )
 
     elif item in LOGIC or item in table.keys():
         return interpret(exp[1:], table, item)
@@ -83,17 +60,16 @@ def interpret (exp, table, left=""):
 
 
 
+
+
+
 def _test ():
-    #interpret(["cat_asleep", "OR", ["NOT", "cat_gone"]],{"door_open": "false", "cat_gone": "true", "cat_asleep": "true"})
-    print(interpret(["NOT","true", "AND", "true"], {}))                                              #false
-    print(interpret(["NOT",["cat_happy", "OR", "false"], "AND", "true"], {"cat_happy":"false"}))     #true
-    print(interpret(["NOT", "AND"], {"AND": "false"}))                                               #true
-    print(interpret(["NOT", "AND", "true"], {"NOT":"true"}))                                         #true
-    print(interpret(["true", "AND", "true", "AND", "false"], {}))                                    #false
 
 
+    print(interpret(["NOT", "asleep", "OR", "true", "AND", "AND"], {"asleep":"true", "AND": "true"}))
+    print(interpret(["NOT", "true", "OR", "true", "AND", "true"], {}))
+    print(not True or True and True)
+    print(interpret(["NOT", "false", "AND", "true", "AND", ["NOT","false", "AND", "true"]], {}))
+    print(not False and True and (not False and True))
 
-#print(interpret(["NOT", "NOT"],{"NOT":"false", "AND":"false"}))
-#print(interpret([["true", "AND", "false"], "AND", "true"],{})) #true
-
-#_test()
+_test()
