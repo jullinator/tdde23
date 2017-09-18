@@ -2,12 +2,8 @@ import cv2
 import numpy as np
 
 
-
-
-def no_blue():
+def no_blue(img):
     img[:,:,2] = 200
-
-
 
 def add_weighted(img1, img2, w1, w2):
     """w1 (0-1)"""
@@ -43,5 +39,5 @@ def show_image(img, title="opencv res"):
 
 messi = cv2.imread('resources/messi.jpg')
 logo = cv2.imread('resources/logo.jpg')
-merge, tbg, sfg = paste_opaque(logo, messi, True)
+merge = paste_opaque(logo, messi, True)
 show_image(merge)
